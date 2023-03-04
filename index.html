@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background-image: url("https://nineplanets.org/static/lib/astro/images/shadow-16.png");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      color: white;
+      margin-top: 20px;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Saranya animation */
+    #name {
+      position: relative;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes example {
+      0%   { left:0px; top:0px;}
+      25%  { left:100px; top:0px;}
+      50%  { left:100px; top:100px;}
+      75%  { left:0px; top:100px;}
+      100% { left:0px; top:0px;}
+    }
+
+    /* Media queries */
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      #name {
+        animation-duration: 2s;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 0.8em;
+      }
+      #name {
+        animation-duration: 1s;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Happy Birthday </h1>
+  </header>
+  <main>
+    <center><h1 id="name">Saranya</h1></center>
+    <p> </p>
+    <p>Today is a special day because it is your birthday!</p>
+    <p>I hope you have a wonderful day and a great year ahead.</p>
+    <img src="https://nineplanets.org/static/lib/astro/images/shadow-16.png" alt="Happy Birthday image">
+  </main>
+  <footer>
+    <div id="secondsdisplay"></div>
+  </footer>
+  <script>
+    var seconds=0;
+    function displayseconda() {
+      seconds +=1;
+      document.getElementById("secondsdisplay").innerText=""+seconds+"";
+    }
+    setInterval(displayseconda,1000);
+    function redirectpage() {
+      window.location="https://faithful-orchid-clsqjx.mystrikingly.com";
+    }
+    setTimeout('redirectpage()',5000);
+  </script>
+</body>
+</html>
